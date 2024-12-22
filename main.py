@@ -14,4 +14,10 @@ from classes.employees.Employee import Employee
 employee_1 = Employee('Serii', 'Burduja', 30000)
 employee_2 = Employee('Zezik', 'Test', 30000)
 
-print(f'employee_1.fullname(): {employee_1.fullname()}')
+print(employee_1.pay)
+print(employee_1.pay)
+print(Employee.num_of_employees)
+
+# print(f'employee_1.fullname(): {employee_1.fullname()}')
+
+
