@@ -1,6 +1,6 @@
 class Employee:
-    num_of_employees = 0
-    rais_amount = 1.04
+    num_of_employees: int = 0
+    rais_amount: float = 1.04
     def __init__(self, first_name: str, last_name: str, pay: int) -> None:
         self.first_name = first_name
         self.last_name = last_name
@@ -13,3 +13,21 @@ class Employee:
 
     def applayRaise(self):
         self.pay = self.pay * self.rais_amount
+
+    # raise amount for all instance at once
+    @classmethod 
+    def raiseAmount(cls, amount: int):
+        cls.rais_amount = amount
+
+    # alternative constructor to create new instance
+    @classmethod
+    def fromString(cls, employee_string: str):
+        first, last, pay = employee_string.split('-')
+        pay = int(pay)
+        return cls(first, last, pay)
+
+    @staticmethod
+    def isWorkDay(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return False
+        return True
