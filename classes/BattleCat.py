@@ -1,3 +1,4 @@
+import random
 from classes.Cat import Cat
 from classes.Target import Target
 
@@ -8,7 +9,12 @@ class BattleCat(Cat):
         self._power = 200
         print(f"BattleCat {self._name} with {self._power} created")
     
-    def cannonFire(self, target: Target, coordinate: int):
+    def cannonFire(self):
+        target = Target(random.randint(1, 10))
+        coordinate = input('Enter coordinate as integer from 1 to 10: ')
+        if not coordinate.isdigit():
+            print('Invalid coordinate')
+            return
         print(f'Fire on {target}')
         self._power -= 1
         print(f'Power: {self._power}')

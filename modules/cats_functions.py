@@ -9,7 +9,6 @@ def catsFunctions():
     
     def catPlay():
         global power
-        print(f'Поиграй со мной, {power}')
         power -= int(input())
 
     def catWantPlay():
@@ -26,7 +25,6 @@ def catsFunctions():
 
     catCreate()
     while catIsActive():
-        catWantPlay()
         catFeed()
         catWantPlay()
         catPlay()
