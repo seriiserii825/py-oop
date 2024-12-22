@@ -4,3 +4,6 @@ class Employee:
         self._last_name = last_name
         self._pay = pay
         self._email = f"{first_name}.{last_name}@company.com"
+
+    def fullname(self)-> str:
+        return f"{self._first_name} {self._last_name}"

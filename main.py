@@ -11,5 +11,7 @@
 
 from classes.employees.Employee import Employee
 
-employee_1 = Employee('serii', 'burduja', 30000)
-employee_2 = Employee('zezik', 'test', 30000)
+employee_1 = Employee('Serii', 'Burduja', 30000)
+employee_2 = Employee('Zezik', 'Test', 30000)
+
+print(f'employee_1.fullname(): {employee_1.fullname()}')
