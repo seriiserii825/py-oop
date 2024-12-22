@@ -1,0 +1,16 @@
+# catsFunctions()
+# cat = Cat('Мурзик')
+# while cat.is_active():
+#     cat.want_play()
+#     cat.feed()
+#     cat.want_play()
+#     cat.play()
+# cat.sleep()
+# battle_cat = BattleCat('Барсик')
+# target = Target(10)
+# while battle_cat.is_active():
+#     battle_cat.feed()
+#     battle_cat.want_play()
+#     battle_cat.play()
+#     battle_cat.cannonFire(target, 10)
+# battle_cat.sleep()
