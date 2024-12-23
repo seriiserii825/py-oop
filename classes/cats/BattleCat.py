@@ -1,8 +1,8 @@
 import random
 from rich import print
-from classes.Cat import Cat
-from classes.Target import Target
 
+from classes.cats.Cat import Cat
+from classes.cats.Target import Target
 
 class BattleCat(Cat):
     def __init__(self, name):

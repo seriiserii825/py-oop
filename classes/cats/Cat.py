@@ -13,10 +13,10 @@ class Cat:
         print(f'[blue] Поиграл с тобой, {self._power}')
 
     def want_play(self):
-        print(f'[green]Поиграй со мной, {self._power}, 0 - 100: ')
+        print(f'[green]Поиграй со мной, 0 - 100 ({self._power}): ')
 
     def feed(self):
-        print(f'[blue]Покорми меня, {self._power}, 0 - 100: ')
+        print(f'[blue]Покорми меня, 0 - 100 ({self._power}): ')
         self._power += int(input())
 
     def sleep(self):
