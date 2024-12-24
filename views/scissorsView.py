@@ -1,17 +1,27 @@
+from enum import Enum
 import random
+import sys
+
+class RPS(Enum):
+    ROCK = 1
+    PAPER = 2
+    SCISSORS = 3
+
 def scissorsView():
     playerchoice = input("Choose rock(1), paper(2), or scissors(3): ")
-    playerchoice = int(playerchoice)
+    try:
+        playerchoice = int(playerchoice)
+    except ValueError:
+        sys.exit('👺 Invalid type, please enter a number')
 
     if playerchoice < 1 or playerchoice > 3:
-        print("😢 Invalid choice")
-        return
+        sys.exit('🧨 Invalid choice')
 
     computerchoice = random.randint(1, 3)
     computerchoice = int(computerchoice)
 
-    print("Player choice: ", playerchoice)
-    print("Computer choice: ", computerchoice)
+    print("Player choice: ", RPS(playerchoice).name)
+    print("Computer choice: ", RPS(computerchoice).name)
 
     if playerchoice == computerchoice:
         print("🟰 It's a tie!")
@@ -23,4 +33,3 @@ def scissorsView():
         print("🎉 Player wins!")
     else:
         print("👺 Computer wins!")
-
