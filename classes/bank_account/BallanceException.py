@@ -1,0 +1,2 @@
+class BallanceException(Exception):
+    pass

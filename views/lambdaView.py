@@ -13,41 +13,41 @@ def lambdaView():
 
 ################################################################################################
 
-def funcBuilder(x):
-    return lambda n: n + x
+    def funcBuilder(x):
+        return lambda n: n + x
 
-addTen = funcBuilder(10)
-addTwenty = funcBuilder(20)
+    addTen = funcBuilder(10)
+    addTwenty = funcBuilder(20)
 
-print(f"addTen(5): {addTen(5)}")
-print(f"addTwenty(5): {addTwenty(5)}")
-
-################################################################################################
-
-numbers = [1, 2, 3, 4, 5]
-squared = list(map(lambda x: x**2, numbers))
-print(f"squared: {squared}")
+    print(f"addTen(5): {addTen(5)}")
+    print(f"addTwenty(5): {addTwenty(5)}")
 
 ################################################################################################
 
-numbers = [1, 2, 3, 4, 5]
-even = list(filter(lambda x: x % 2 == 0, numbers))
-print(f"even: {even}")
+    numbers = [1, 2, 3, 4, 5]
+    squared = list(map(lambda x: x**2, numbers))
+    print(f"squared: {squared}")
 
 ################################################################################################
 
-from functools import reduce
-
-numbers = [1, 2, 3, 4, 5]
-
-sum = reduce(lambda acc, curr: acc + curr, numbers)
-print(f"sum: {sum}")
+    numbers = [1, 2, 3, 4, 5]
+    even = list(filter(lambda x: x % 2 == 0, numbers))
+    print(f"even: {even}")
 
 ################################################################################################
 
-names = ['John', 'Paul', 'George', 'Ringo']
+    from functools import reduce
 
-names_length = reduce(lambda acc, curr: acc + len(curr), names, 0)
-print(f"names_length: {names_length}")
+    numbers = [1, 2, 3, 4, 5]
+
+    sum = reduce(lambda acc, curr: acc + curr, numbers)
+    print(f"sum: {sum}")
+
+################################################################################################
+
+    names = ['John', 'Paul', 'George', 'Ringo']
+
+    names_length = reduce(lambda acc, curr: acc + len(curr), names, 0)
+    print(f"names_length: {names_length}")
 
 
