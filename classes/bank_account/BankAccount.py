@@ -12,7 +12,6 @@ class BankAccount():
 
     def deposit(self, amount):
         self.initial_amount += amount
-        print("🎉 Deposit complete")
         self.getBallance()
 
     def viableTransaction(self, amount):
@@ -31,3 +30,16 @@ class BankAccount():
         except BallanceException as e:
             print(e)
             self.getBallance()
+    
+    def transfer(self, amount, account):
+        try:
+            if self.viableTransaction(amount):
+                print("\n********** Transfer begins 🚀")
+                self.viableTransaction(amount)
+                self.withdraw(amount)
+                account.deposit(amount)
+                print("********** Transfer complete ✅")
+        except BallanceException as e:
+            print(e)
+            print("Transfer failed 🚫")
+

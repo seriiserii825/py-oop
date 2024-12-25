@@ -1,13 +1,12 @@
 from classes.bank_account.BankAccount import BankAccount
+from classes.bank_account.InterestRewardsAccount import InterestRewardsAccount
 
 
 def bankAccounts():
     dave = BankAccount(1000, "Dave")
-    john = BankAccount(2000, "John")
-    dave.getBallance()
-    john.getBallance()
+    sara = InterestRewardsAccount(500, "Sara")
 
-    dave.deposit(500)
-    john.deposit(1000)
+    sara.getBallance()
+    sara.deposit(100)
+    sara.transfer(100, dave)
 
-    dave.withdraw(20000)
