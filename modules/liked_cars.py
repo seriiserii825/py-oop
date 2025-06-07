@@ -6,25 +6,23 @@
 # интересам. Не забудьте связать каждый новый экземпляр класса автомобилей,
 # удовлетворяющих интересам Гены, с моделью данного автомобиля. Выведите
 # названия моделей тех автомобилей, которые подходят запросам нашего героя.
-from pprint import pprint
 
 results = []
 
+
 class Car:
-    color:str = 'black'
-    engine:str = '1.6'
+    color: str = 'black'
+    engine: str = '1.6'
     model: str = ''
+
 
 with open('data/cars.txt') as file:
     arr = [car[:-1] for car in file.readlines()]
     # pprint(arr)
 
 for index in range(len(arr)):
-    car = arr[index].split() 
+    car = arr[index].split()
     if car[2] == Car.engine and car[3] == Car.color:
         liked_car = Car()
         liked_car.model = f"{car[0]} {car[1]}"
         results.append(liked_car)
-
-for car in results:
-    pprint(car.__dict__)
