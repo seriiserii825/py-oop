@@ -1,12 +1,4 @@
-from views.bankAccounts import bankAccounts
-from views.catsView import catsView
-from views.employeesView import employeesView
-from views.lambdaView import lambdaView
-from views.scissorsView import scissorsView
+from modules.folium import my_folium
 
 
-# catsView()
-# employeesView()
-# scissorsView()
-# lambdaView()
-bankAccounts()
+my_folium()
