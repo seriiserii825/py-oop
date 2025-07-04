@@ -16,19 +16,18 @@
 import pprint
 import random
 
-ctuple = ('some', 1, 18)
+ctuple = ("some", 1, 18)
 
-cobj = {
-        "age": 2,
-        "name": 'some'
-        }
+cobj = {"age": 2, "name": "some"}
 
 pprint.pprint(ctuple)
 pprint.pprint(cobj)
 
+
 class Student:
     age: int = 15
     height: int = 160
+
 
 students = [Student() for _ in range(5)]
 students_height = [students[index].height for index in range(5)]
@@ -36,6 +35,6 @@ print(f"students_height: {students_height}")
 students[4].height = 165
 index = random.randint(0, 4)
 del students[index]
-print(f'len(students): {len(students)}')
+print(f"len(students): {len(students)}")
 
 pprint.pprint(students)

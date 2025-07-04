@@ -1,4 +1,6 @@
 from pprint import pprint
+
+
 def writeData():
     books_count = int(input("Enter the number of books: "))
     with open("books.txt", "w") as file:
@@ -9,13 +11,15 @@ def writeData():
             file.write(book_name + "\n")
             file.write(book_author + "\n")
             file.write(book_pages + "\n")
-    print('Created books.txt')
+    print("Created books.txt")
+
 
 # writeData()
 
+
 def changePage():
-    book_name = input('Enter book name: ')
-    with open('books.txt', 'r') as file:
+    book_name = input("Enter book name: ")
+    with open("books.txt", "r") as file:
         books_lines = file.readlines()
         books_lines = [book.strip() for book in books_lines]
     pprint(books_lines)
@@ -32,12 +36,13 @@ def changePage():
 
     for index, _ in enumerate(books_lines):
         if index_to_change == index:
-            pages = input('insert pages: ' )
+            pages = input("insert pages: ")
             books_lines[index] = pages
     pprint(books_lines)
 
-    with open('books.txt', 'w') as file:
-        content = ''.join([f"{book}\n" for book in books_lines])
+    with open("books.txt", "w") as file:
+        content = "".join([f"{book}\n" for book in books_lines])
         file.write(content)
+
 
 changePage()

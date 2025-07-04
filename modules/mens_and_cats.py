@@ -16,23 +16,25 @@
 # для двоих кошек значение атрибута цвета -
 # на чёрный. (То есть создайте данный атрибут)
 
+
 class A:
     height: int = 75
     weight: int = 65
     count: int = 150
     year: int = 2020
 
+
 A.year += 2
 A.count = 148
-print(f'{A.__dict__}: {{A.__dict__}}')
+print(f"{A.__dict__}: {{A.__dict__}}")
 
-class Cat: 
-    color: str = 'white'
+
+class Cat:
+    color: str = "white"
     amount: int = 14
+
 
 arr = [Cat() for _ in range(Cat().amount)]
 
-arr[0].color = arr[1].color = 'black'
+arr[0].color = arr[1].color = "black"
 print(arr[0].color, arr[1].color, arr[5].color)
-
-

@@ -9,4 +9,3 @@ def bankAccounts():
     sara.getBallance()
     sara.deposit(100)
     sara.transfer(100, dave)
-

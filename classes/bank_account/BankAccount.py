@@ -1,11 +1,14 @@
 from classes.bank_account.BallanceException import BallanceException
 
 
-class BankAccount():
+class BankAccount:
     def __init__(self, initial_amount, account_name):
         self.initial_amount = initial_amount
         self.account_name = account_name
-        print(f"💁 Account {self.account_name} created with initial amount 💵 ${self.initial_amount:.2f}")
+        print(
+            f"💁 Account {self.account_name} created with initial amount \
+                    💵 ${self.initial_amount:.2f}"
+        )
 
     def getBallance(self):
         print(f"🧔 Account {self.account_name} has 💵 ${self.initial_amount:.2f} left")
@@ -19,8 +22,10 @@ class BankAccount():
             return True
         else:
             raise BallanceException(
-                    f"🥵 Sorry, account {self.account_name} has insufficient funds to withdraw ${amount:.2f}"
-                    )
+                f"🥵 Sorry, account {self.account_name} has insufficient \
+                        funds to withdraw ${amount:.2f}"
+            )
+
     def withdraw(self, amount):
         try:
             if self.viableTransaction(amount):
@@ -30,7 +35,7 @@ class BankAccount():
         except BallanceException as e:
             print(e)
             self.getBallance()
-    
+
     def transfer(self, amount, account):
         try:
             if self.viableTransaction(amount):
@@ -42,4 +47,3 @@ class BankAccount():
         except BallanceException as e:
             print(e)
             print("Transfer failed 🚫")
-

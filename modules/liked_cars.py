@@ -11,12 +11,12 @@ results = []
 
 
 class Car:
-    color: str = 'black'
-    engine: str = '1.6'
-    model: str = ''
+    color: str = "black"
+    engine: str = "1.6"
+    model: str = ""
 
 
-with open('data/cars.txt') as file:
+with open("data/cars.txt") as file:
     arr = [car[:-1] for car in file.readlines()]
     # pprint(arr)
 

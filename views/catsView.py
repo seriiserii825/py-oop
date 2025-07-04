@@ -1,8 +1,4 @@
 from classes.cats.BattleCat import BattleCat
-from classes.cats.Cat import Cat
-from classes.cats.Target import Target
-from modules.cats_functions import catsFunctions
-from modules.simple_cats import cat
 
 
 def catsView():
@@ -14,7 +10,7 @@ def catsView():
     #     cat.want_play()
     #     cat.play()
     # cat.sleep()
-    battle_cat = BattleCat('Барсик')
+    battle_cat = BattleCat("Барсик")
     while battle_cat.is_active():
         battle_cat.feed()
         battle_cat.cannonFire()

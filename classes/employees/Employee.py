@@ -23,7 +23,7 @@ class Employee:
     # alternative constructor to create new instance
     @classmethod
     def fromString(cls, employee_string: str):
-        first, last, pay = employee_string.split('-')
+        first, last, pay = employee_string.split("-")
         # convert pay to integer
         pay_int = int(pay)
         return cls(first, last, pay_int)
